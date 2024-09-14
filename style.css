@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Madimi+One&family=Oswald:wght@200..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+#main {
+  width: 100vw;
+  height: 100vh;
+  background-color: #eabd9c;
+  position: relative;
+  top: 30%;
+
+  /* display: flex;
+    justify-content: content;
+    align-items: center; */
+}
+#main img {
+  height: 600px;
+  position: absolute;
+  top: 18.5%;
+  right: 35%;
+  display: flex;
+  justify-content: content;
+  align-items: center;
+  z-index: 99;
+}
+#scroll1 {
+  position: absolute;
+  top: 30%;
+  height: 160px;
+  /* background-color: yellow; */
+  white-space: nowrap;
+  display: flex;
+  overflow-x: auto;
+  width: 100vw;
+}
+#scroll1 h1 {
+  display: inline-block;
+  font-size: 110px;
+  font-weight: 1000;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  animation-name: scroll;
+  animation-duration: 1s;
+}
+
+#scroll2 {
+  position: absolute;
+  top: 50%;
+  height: 160px;
+  white-space: nowrap;
+  display: flex;
+  overflow: hidden; /* Hide overflow */
+  width: 100vw;
+  animation: scroll-horizontal 10s linear infinite; /* Apply animation */
+}
+
+/* #scroll2 h1 {
+  display: inline-block;
+  font-size: 110px;
+  font-weight: 1000;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+  color: transparent;
+  z-index: 100;
+} */
+
+#scroll2 h1 {
+  display: inline-block;
+  font-size: 110px;
+  font-weight: 1000;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+  color: transparent;
+  z-index: 100;
+}
+
+#scroll3 {
+  position: absolute;
+  top: 70%;
+  height: 160px;
+  /* background-color: yellow; */
+  white-space: nowrap;
+  display: flex;
+  overflow-x: auto;
+  width: 100vw;
+}
+#scroll3 h1 {
+  display: inline-block;
+  font-size: 110px;
+  font-weight: 1000;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+}
+#text {
+  /* background-color: yellow; */
+  height: 40px;
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 1000;
+  text-transform: uppercase;
+  position: absolute;
+  top: 20%;
+  right: 34%;
+  text-align: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+/* @keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100);
+  }
+} */
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(100%); /* Start off-screen to the right */
+  }
+  100% {
+    transform: translateX(-100%); /* Move to off-screen on the left */
+  }
+}
